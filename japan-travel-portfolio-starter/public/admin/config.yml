@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_ID/YOUR_REPO
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    fields:
+      - { label: "상품명", name: "title", widget: "string" }
+      - { label: "부제", name: "subtitle", widget: "string", required: false }
+      - { label: "슬러그", name: "slug", widget: "string" }
+      - { label: "지역", name: "region", widget: "select", options: ["오사카/교토","도쿄","홋카이도","규슈","오키나와","기타"] }
+      - { label: "기간(박)", name: "duration_nights", widget: "number" }
+      - { label: "기간(일)", name: "duration_days", widget: "number" }
+      - { label: "시작가(원)", name: "price_from", widget: "number" }
+      - { label: "타겟 요약", name: "who_for", widget: "string" }
+      - { label: "대표 이미지", name: "cover", widget: "image", required: false }
