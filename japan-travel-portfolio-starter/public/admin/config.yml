@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_ID/YOUR_REPO
+  repo: Seung_Chan_Kim_Portfolio
   branch: main
 
 media_folder: "public/uploads"
